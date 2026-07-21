@@ -3,7 +3,7 @@
   name: Dragonovaya
   parent: [BaseWeaponRifle, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponRifleSecurityMarks
-  description: The Dragonovaya is a Classic, brought back to use after the Neocorporate wars as multi-purpose weapon. It's seen many uses throughout it's walks of life. As a hunting rifle, as a lance when paired with a Bayonet, as an easy weapon to reach to in the hands of Militiapeople... In the end, though, it still finds itself in the hands of Security and Armed personnel, as the easy answer to the question of "How do I stop people coming close to us from afar?"
+  description: mfw nonagon infinity opens the door
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/SDMS.rsi
@@ -13,7 +13,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
-    fireRate: 1.8
+    fireRate: 1.4
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

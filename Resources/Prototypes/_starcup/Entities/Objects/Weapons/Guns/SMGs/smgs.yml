@@ -7,10 +7,10 @@
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Guns/SMGs/mp5.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _starcup/Objects/Weapons/Guns/SMGs/mp5.rsi
   - type: Wieldable
@@ -21,8 +21,8 @@
   - type: Gun
     minAngle: 21
     maxAngle: 32
-    fireRate: 6
-    burstFireRate: 18
+    fireRate: 8
+    burstFireRate: 15
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
     selectedMode: Burst
@@ -30,8 +30,8 @@
     - Burst
     - FullAuto
     - SemiAuto
-    shotsPerBurst: 3
-    burstCooldown: 0.375
+    shotsPerBurst: 2
+    burstCooldown: 0.4
   - type: ItemSlots
     slots:
       gun_magazine:
