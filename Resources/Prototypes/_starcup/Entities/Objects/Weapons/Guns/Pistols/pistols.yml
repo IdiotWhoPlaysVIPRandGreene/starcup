@@ -78,3 +78,65 @@
   - type: ExaminableClothing
     examineText: clothing-C221
   # end starcup
+
+- type: entity
+  name: Matchlock Axe
+  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
+  id: WeaponPistolMatchAxe
+  description: Placeholder Text
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Pistols/MatchAxe.rsi
+    state: base
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: UseDelayOnShoot
+  - type: UseDelay
+    delay: 7.5 # IT IS a shortened Arquebus. Largely unchanged due to the big axe on the front, though.
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeAntiMateriel
+    capacity: 1
+    proto: CartridgeAntiMateriel # I'm kinda lending from both the Mosin (since that one's melee actually works for me) and the musket because the Axe Pistol is pretty much a shortened arquebus. May change.
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 20 # it's an axe.
+        Structural: 10 # It's kinda like the swedish boarding axe. Note to self, might be good to associate with pirate faction?
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: -20 # Good luck trying to do much damage with the small tip of the axe!~
+        Structural: -10 # Yeah, no. Stabbing stuff won't do much to destroy structures.
+        Piercing: 3
+    angle: 150
+    animation: WeaponArcSlash
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 2
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 2
+  - type: Sharp
+    butcherDelayModifier: 2 #It's a bayonet axe
+  - type: GunRequiresWield
+  - type: StaticPrice
+    price: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-mosin
+  # end starcup
